@@ -1,0 +1,36 @@
+default:
+  before_script:
+    - pwd
+    - whoami
+    - npm install --registry=https://registry.npm.taobao.org
+
+cache:
+  paths:
+    - .nuxt/
+    - assets/sprite/
+    - logs/
+    - node_modules/
+
+dev:
+  script:
+    - npm run deploy:dev
+  only:
+    - develop
+  tags:
+    - <%= appname %>,dev
+
+qa:
+  script:
+    - npm run deploy:qa
+  only:
+    - release/qa
+  tags:
+    - <%= appname %>,qa
+
+staging:
+  script:
+    - npm run deploy:staging
+  only:
+    - release/staging
+  tags:
+    - <%= appname %>,staging

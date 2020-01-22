@@ -1,0 +1,79 @@
+{
+  "vetur.format.defaultFormatter.html": "prettier",
+  "cSpell.enabledLanguageIds": [
+    "asciidoc",
+    "css",
+    "git-commit",
+    "html",
+    "javascript",
+    "json",
+    "jsonc",
+    "less",
+    "markdown",
+    "plaintext",
+    "scss",
+    "text",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "vue-html",
+    "vue-postcss",
+    "yaml",
+    "yml"
+  ],
+  "cSpell.words": [
+    "gitignore",
+    "stylelint",
+    "geolocation",
+    "captcha",
+    "readonly",
+    "maxlength",
+    "loadability",
+    "keyframes",
+    "rgba",
+    "unclickable",
+    "uploader",
+    "dropdown",
+    "mouseenter",
+    "mouseleave",
+    "wechat",
+    "lazyload",
+    "mixins",
+    "custermized",
+    "typeof",
+    "qrcode",
+    "weibo",
+    "compositionstart",
+    "compositionend",
+    "dataset",
+    "keyup",
+    "iframe",
+    "nowrap",
+    "geolocate",
+    "nbsp",
+    // VS Code
+    "endregion",
+    // Gitlab
+    "gitlab",
+    // dot files
+    "editorconfig",
+    "prettierrc",
+    "stylelintrc",
+    "gitattributes",
+    // yeoman
+    "appname",
+    // Magento
+    "magento",
+    // Vue
+    "vuejs",
+    "vnode",
+    "vuex",
+    // Nuxt.js
+    "nuxt",
+    "nuxtjs",
+    // plugins
+    "vuelidate",
+    "swiper",
+    "axios"
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "name": "amqcn",
+  "version": "1.0.0",
+  "description": "Alexander McQueen Nuxtjs project",
+  "author": "Hank",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "deploy:dev": "NODE_ENV=integration npm run build && pm2 startOrRestart ecosystem.config.js --env integration",
+    "deploy:qa": "NODE_ENV=qa npm run build && pm2 startOrRestart ecosystem.config.js --env qa",
+    "deploy:staging": "NODE_ENV=staging npm run build && pm2 startOrRestart ecosystem.config.js --env staging",
+    "deploy:prod": "NODE_ENV=production npm run build && pm2 startOrRestart ecosystem.config.js --env production",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .  --fix & stylelint assets/**/*.scss --ignore-path .gitignore --fix"
+  },
+  "lint-staged": {
+    "*.{js,vue}": "eslint",
+    "*.scss": "stylelint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/component-cache": "^1.1.5",
+    "@nuxtjs/device": "^1.2.3",
+    "@nuxtjs/proxy": "^1.3.3",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "@nuxtjs/svg-sprite": "^0.4.0",
+    "@nuxtjs/toast": "^3.3.0",
+    "body-scroll-lock": "^2.6.4",
+    "js-cookie": "^2.2.1",
+    "node-sass": "^4.13.0",
+    "normalize.css": "^8.0.1",
+    "nuxt": "^2.10.2",
+    "nuxt-api-module": "^1.0.0",
+    "nuxt-ssr-cache": "^1.5.1",
+    "path-to-regexp": "^6.1.0",
+    "qrcode": "^1.4.4",
+    "redis": "^2.8.0",
+    "request-tracker-middleware": "0.0.2",
+    "sass-loader": "^8.0.0",
+    "svg4everybody": "^2.1.9",
+    "swiper": "^4.0.7",
+    "velocity-animate": "^1.5.2",
+    "video.js": "^7.6.6",
+    "vue-awesome-swiper": "^3.1.3",
+    "vue-baidu-map": "^0.21.22",
+    "vue-lazyload": "^1.3.3",
+    "vuejs-datepicker": "^1.6.2",
+    "vuelidate": "^0.7.4",
+    "weixin-js-sdk": "^1.4.0-test"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^1.0.1",
+    "@nuxtjs/eslint-module": "^1.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "eslint-plugin-prettier": "^3.0.1",
+    "husky": "^2.6.0",
+    "lint-staged": "^8.2.1",
+    "prettier": "^1.16.4",
+    "stylelint": "^10.1.0",
+    "stylelint-config-prettier": "^5.2.0",
+    "stylelint-prettier": "^1.1.1"
+  }
+}
